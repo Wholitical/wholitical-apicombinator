@@ -35,7 +35,9 @@ dependencies {
 	compile('org.projectlombok:lombok:1.16.6')
 	compile('org.springframework.boot:spring-boot-starter-validation')
 	compile("com.h2database:h2")
-	testCompile('org.springframework.boot:spring-boot-starter-test') 
+	compile('com.squareup.retrofit2:retrofit:2.0.2')
+	compile('com.squareup.retrofit2:converter-jackson:2.0.2')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 
