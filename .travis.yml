@@ -1,3 +1,18 @@
+sudo: required
+
+services:
+  - docker
+
 language: java
 jdk:
   - oraclejdk8
+
+before_install:
+  - sudo apt-get install jq
+
+after_success:
+  - docker build -t wholitical/apicombinator .
+
+before_deploy:
+  - curl https://raw.githubusercontent.com/silinternational/ecs-deploy/develop/ecs-deploy > ecs-deploy
+
